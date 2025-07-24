@@ -88,13 +88,11 @@ hr{
 }
 
 footer{
+    font-family: "Inter", sans-serif;
     font-size: 10px;
     text-align: center;
     font-weight: bold;
-    position: fixed;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
+    margin: 40px 0;
 }
 
 @media screen and (max-width: 800px) {

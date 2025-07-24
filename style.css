@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #0A0F1C;
+    font-family: "Inter", sans-serif;
+    color: #F5F7FA;
+}
+
+.header span, .pour, .choose{
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.container-wrapper{
+    width: 60vw;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+}
+
+.header img {
+    width: 120px;
+    height: 120px;
+    rotate: 35deg;
+}
+
+.pour{
+    font-size: 18px;
+}
+
+.page-info{
+    text-align: center;
+    width: 500px;
+}
+
+hr{
+    width: 70%;
+    border: 1px solid #F5F7FA;
+    box-shadow: 0 0 20px #FF4DA6;
+    margin: 40px 0;
+}
+
+.choose{
+    display: inline-block;
+    border: 2px solid transparent;
+    background-color: #FF4DA6;
+    font-size: 25px;
+    border-radius: 50px;
+    padding: 5px 80px;
+    color: #F5F7FA;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.choose::before {
+ content: "";
+ position: absolute;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 100%;
+ background-color: #0A0F1C;
+ border: 0 solid #FF4DA6;
+ transform: translateX(-101%);
+ transition: all .3s;
+ z-index: -1;
+}
+
+.choose:hover::before {
+ transform: translateX(0);
+}
+
+footer{
+    font-size: 10px;
+    text-align: center;
+    font-weight: bold;
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media screen and (max-width: 800px) {
+    .container-wrapper{
+        width: 80vw;
+        margin: 100px auto;
+    }
+    .header {
+        font-size: 50px;
+    }
+
+    .header img {
+        width: 80px;
+        height: 80px;
+        rotate: 35deg;
+    }
+
+    .page-info{
+        width: 90%;
+        font-size: 15px;
+    }
+
+    hr{
+        width: 90%;
+    }
+
+    .choose{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .container-wrapper{
+        width: 80vw;
+        margin: 100px auto;
+    }
+    .header {
+        font-size: 30px;
+    }
+
+    .header img {
+        width: 60px;
+        height: 60px;
+        rotate: 35deg;
+    }
+
+    .page-info{
+        width: 90%;
+        font-size: 15px;
+    }
+
+    hr{
+        width: 90%;
+    }
+
+    .choose{
+        font-size: 20px;
+    }
+
+}
